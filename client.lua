@@ -284,8 +284,23 @@ RegisterNetEvent('deliveries:beginMission', function()
 
     exports['ox_lib']:notify({ type = 'info', description = Translations.start_job, duration = 5000, position = Config.NotificationPosition })
 
-    savePlayerOutfit()
-    applyWorkOutfit()
+    if lib.progressBar({
+        duration = 2500,
+        useWhileDead = false,
+        canCancel = false,
+        disable = {
+            car = true,
+            move = true,
+            combat = true
+        },
+        anim = {
+            dict = "mp_safehouseshower@male@", 
+            clip = "male_shower_towel_dry_to_get_dressed"
+        },
+    }) then
+        savePlayerOutfit()
+        applyWorkOutfit()
+    end
 
     isInDelivery = true
     startNextDelivery()
