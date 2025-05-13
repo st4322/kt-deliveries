@@ -47,8 +47,8 @@ Config.DeliveryLocations = {
 
 -- Number of packages and rewards
 Config.TotalPackages = 10
-Config.RewardMin = 100
-Config.RewardMax = 125
+Config.RewardMin = 450
+Config.RewardMax = 750
 
 -- Time limit and reduced payment percentage for delayed deliveries
 Config.MaxDeliveryTime = 300000       -- Max delivery time in milliseconds (5 minutes)
